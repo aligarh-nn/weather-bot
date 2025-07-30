@@ -1,9 +1,14 @@
 import logging
 import requests
 from datetime import datetime, timedelta, time as dtime
-import asyncio
 from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, CallbackContext
+from telegram.ext import (
+    ApplicationBuilder,
+    CommandHandler,
+    ContextTypes,
+    CallbackContext,
+    JobQueue,
+)
 
 TELEGRAM_TOKEN = "8313163480:AAFfPfP488s6CU2wNRW7izYO5XgVzagIK_U"
 OPENWEATHER_API_KEY = "5651fa2b774956bf6c11e9b3cee22651"
